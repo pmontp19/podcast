@@ -38,3 +38,8 @@ ENV/
 
 # Project specific
 dades/
+
+# Frontend (Astro)
+frontend/node_modules/
+frontend/.astro/
+frontend/dist/

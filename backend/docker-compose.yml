@@ -1,5 +1,5 @@
 services:
-  podcast:
+  backend:
     build: .
     restart: "no"
     environment:
@@ -13,4 +13,4 @@ services:
       - LOG_LEVEL=${LOG_LEVEL:-INFO}
       - GITHUB_TOKEN=${GITHUB_TOKEN:-}
     volumes:
-      - ./dades:/app/dades
+      - ../dades:/app/dades

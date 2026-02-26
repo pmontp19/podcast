@@ -1,0 +1,16 @@
+services:
+  podcast:
+    build: .
+    restart: "no"
+    environment:
+      - GROQ_API_KEY=${GROQ_API_KEY}
+      - ANTHROPIC_API_KEY=${ANTHROPIC_API_KEY}
+      - RSS_URL=${RSS_URL}
+      - TMDB_API_KEY=${TMDB_API_KEY:-}
+      - RAWG_API_KEY=${RAWG_API_KEY:-}
+      - DB_PATH=/app/dades/podcast.db
+      - MAX_EPISODIS=${MAX_EPISODIS:-10}
+      - LOG_LEVEL=${LOG_LEVEL:-INFO}
+      - GITHUB_TOKEN=${GITHUB_TOKEN:-}
+    volumes:
+      - ./dades:/app/dades

@@ -254,7 +254,9 @@ def exportar_json(conn: sqlite3.Connection) -> None:
         output["podcast"] = podcast_info
     output["episodis"] = resultat
 
-    json_path = os.path.join(os.path.dirname(DB_PATH) or ".", "podcast.json")
+    # Guardar JSON al frontend per a Cloudflare Pages
+    json_path = os.path.join(os.path.dirname(DB_PATH) or ".", "../frontend/src/data/podcast.json")
+    os.makedirs(os.path.dirname(json_path), exist_ok=True)
     with open(json_path, "w", encoding="utf-8") as f:
         json.dump(output, f, ensure_ascii=False, indent=2)
     log.info("JSON exportat: %s", json_path)

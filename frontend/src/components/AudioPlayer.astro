@@ -1,0 +1,157 @@
+---
+---
+
+<div id="audio-player" class="fixed bottom-0 inset-x-0 z-50 bg-white/95 dark:bg-gray-900/95 backdrop-blur-md border-t border-gray-200 dark:border-gray-800 shadow-xl">
+  <div class="max-w-7xl mx-auto px-4 py-3">
+    <div class="flex items-center gap-3">
+      <!-- Artwork -->
+      <img
+        id="player-artwork"
+        src=""
+        alt=""
+        class="w-12 h-12 rounded-lg object-cover flex-shrink-0 bg-gray-200 dark:bg-gray-700"
+      />
+      <!-- Info -->
+      <div class="flex-1 min-w-0">
+        <p id="player-obra" class="text-sm font-semibold truncate"></p>
+        <p id="player-episodi" class="text-xs text-gray-500 dark:text-gray-400 truncate"></p>
+        <!-- Progress row -->
+        <div class="flex items-center gap-2 mt-1">
+          <span id="player-current" class="text-xs text-gray-500 w-10 flex-shrink-0">0:00</span>
+          <input
+            id="progress-bar"
+            type="range"
+            min="0"
+            max="100"
+            value="0"
+            class="flex-1 h-1 rounded-full appearance-none cursor-pointer"
+            style="accent-color: #f97316;"
+          />
+          <span id="player-duration" class="text-xs text-gray-500 w-10 text-right flex-shrink-0">0:00</span>
+        </div>
+      </div>
+      <!-- Controls -->
+      <div class="flex items-center gap-2 flex-shrink-0">
+        <button
+          id="play-pause-btn"
+          class="w-10 h-10 rounded-full bg-orange-500 hover:bg-orange-600 flex items-center justify-center transition-colors"
+          aria-label="Reproduir/Pausa"
+        >
+          <svg id="icon-play" class="w-5 h-5 fill-white ml-0.5" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+          <svg id="icon-pause" class="w-5 h-5 fill-white hidden" viewBox="0 0 24 24"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+        </button>
+        <button
+          id="close-player-btn"
+          class="w-8 h-8 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 flex items-center justify-center transition-colors text-gray-500"
+          aria-label="Tancar"
+        >
+          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<audio id="audio-element" preload="none"></audio>
+
+<script>
+  const player = document.getElementById('audio-player')!;
+  const audio = document.getElementById('audio-element') as HTMLAudioElement;
+  const playPauseBtn = document.getElementById('play-pause-btn')!;
+  const iconPlay = document.getElementById('icon-play')!;
+  const iconPause = document.getElementById('icon-pause')!;
+  const progressBar = document.getElementById('progress-bar') as HTMLInputElement;
+  const currentEl = document.getElementById('player-current')!;
+  const durationEl = document.getElementById('player-duration')!;
+  const obraEl = document.getElementById('player-obra')!;
+  const episodiEl = document.getElementById('player-episodi')!;
+  const artworkEl = document.getElementById('player-artwork') as HTMLImageElement;
+  const closeBtn = document.getElementById('close-player-btn')!;
+
+  let targetSeconds = 0;
+  let seeked = false;
+
+  function tsToSeconds(ts: string): number {
+    const parts = ts.split(':').map(Number);
+    return parts.length === 3 ? parts[0] * 3600 + parts[1] * 60 + parts[2] : parts[0] * 60 + parts[1];
+  }
+
+  function formatTime(s: number): string {
+    if (isNaN(s) || !isFinite(s)) return '0:00';
+    const m = Math.floor(s / 60);
+    const sec = Math.floor(s % 60);
+    return `${m}:${sec.toString().padStart(2, '0')}`;
+  }
+
+  function showPlayer() {
+    player.classList.add('player-visible');
+    document.body.style.paddingBottom = player.offsetHeight + 'px';
+  }
+
+  function hidePlayer() {
+    player.classList.remove('player-visible');
+    document.body.style.paddingBottom = '';
+    audio.pause();
+    audio.src = '';
+    seeked = false;
+  }
+
+  function setPlayingState(playing: boolean) {
+    iconPlay.classList.toggle('hidden', playing);
+    iconPause.classList.toggle('hidden', !playing);
+  }
+
+  // Listen for play events from cards
+  document.addEventListener('play-context', (e: Event) => {
+    const { audioUrl, timestamp, obra, episodiTitol, imatge } = (e as CustomEvent).detail;
+
+    targetSeconds = tsToSeconds(timestamp);
+    seeked = false;
+
+    audio.src = audioUrl;
+    audio.load();
+    audio.play().catch(() => {});
+
+    obraEl.textContent = obra;
+    episodiEl.textContent = episodiTitol;
+    artworkEl.src = imatge || '';
+    artworkEl.alt = obra;
+
+    showPlayer();
+    setPlayingState(false);
+  });
+
+  // Seek to timestamp once audio is ready
+  audio.addEventListener('canplay', () => {
+    if (!seeked) {
+      audio.currentTime = targetSeconds;
+      seeked = true;
+    }
+  });
+
+  audio.addEventListener('play', () => setPlayingState(true));
+  audio.addEventListener('pause', () => setPlayingState(false));
+
+  audio.addEventListener('timeupdate', () => {
+    if (!audio.duration) return;
+    const pct = (audio.currentTime / audio.duration) * 100;
+    progressBar.value = String(pct);
+    currentEl.textContent = formatTime(audio.currentTime);
+    durationEl.textContent = formatTime(audio.duration);
+  });
+
+  playPauseBtn.addEventListener('click', () => {
+    if (audio.paused) {
+      audio.play();
+    } else {
+      audio.pause();
+    }
+  });
+
+  progressBar.addEventListener('input', () => {
+    if (!audio.duration) return;
+    audio.currentTime = (parseFloat(progressBar.value) / 100) * audio.duration;
+  });
+
+  closeBtn.addEventListener('click', hidePlayer);
+</script>

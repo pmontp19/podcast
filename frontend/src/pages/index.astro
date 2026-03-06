@@ -1,17 +1,127 @@
 ---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import FilterBar from '../components/FilterBar.astro';
+import RecommendationCard from '../components/RecommendationCard.astro';
+import AudioPlayer from '../components/AudioPlayer.astro';
+import '../styles/global.css';
 
+const data = await import('../data/podcast.json');
+
+const items = data.episodis.flatMap(ep =>
+  ep.mencions.map(m => ({ ...m, episodi: { id: ep.id, titol: ep.titol, audio_url: ep.audio_url } }))
+);
+
+// Episodes that have mencions
+const episodisAmbMencions = data.episodis
+  .filter(ep => ep.mencions.length > 0)
+  .map(ep => ({ id: ep.id, titol: ep.titol }));
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Layout>
+  <Header
+    titol={data.podcast.titol}
+    autor={data.podcast.autor}
+    descripcio={data.podcast.descripcio}
+    imatge_url={data.podcast.imatge_url}
+  />
+  <FilterBar episodis={episodisAmbMencions} />
+
+  <main class="max-w-7xl mx-auto px-4 py-6 pb-24">
+    <!-- Results count -->
+    <p id="results-count" class="text-sm text-gray-500 dark:text-gray-400 mb-4">
+      {items.length} recomanacions
+    </p>
+
+    <!-- Grid -->
+    <div id="cards-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+      {items.map(item => (
+        <RecommendationCard
+          obra={item.obra}
+          categoria={item.categoria}
+          marca_temps={item.marca_temps}
+          context={item.context}
+          imatge_url={item.imatge_url}
+          autor={item.autor}
+          any={item.any}
+          puntuacio={item.puntuacio}
+          episodi={item.episodi}
+        />
+      ))}
+    </div>
+
+    <!-- Empty state -->
+    <div id="empty-state" class="hidden text-center py-20 text-gray-400 dark:text-gray-600">
+      <svg class="w-16 h-16 mx-auto mb-4 opacity-40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+        <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
+      </svg>
+      <p class="text-lg font-medium">Cap resultat</p>
+      <p class="text-sm mt-1">Prova amb uns altres filtres</p>
+    </div>
+  </main>
+
+  <AudioPlayer />
+</Layout>
+
+<script>
+  // --- State ---
+  let searchQuery = '';
+  let activeCat = '';
+  let activeEpisode = '';
+
+  const cards = document.querySelectorAll<HTMLElement>('.recommendation-card');
+  const emptyState = document.getElementById('empty-state')!;
+  const resultsCount = document.getElementById('results-count')!;
+
+  function filterCards() {
+    let visible = 0;
+    cards.forEach(card => {
+      const matchSearch = !searchQuery ||
+        card.dataset.obra!.includes(searchQuery) ||
+        card.dataset.autor!.includes(searchQuery) ||
+        card.dataset.context!.includes(searchQuery);
+      const matchCat = !activeCat || card.dataset.categoria === activeCat;
+      const matchEp = !activeEpisode || card.dataset.episodiId === activeEpisode;
+
+      const show = matchSearch && matchCat && matchEp;
+      card.classList.toggle('hidden', !show);
+      if (show) visible++;
+    });
+
+    emptyState.classList.toggle('hidden', visible > 0);
+    resultsCount.textContent = `${visible} recomanaci${visible === 1 ? 'ó' : 'ons'}`;
+  }
+
+  // Search
+  document.getElementById('search-input')?.addEventListener('input', (e) => {
+    searchQuery = (e.target as HTMLInputElement).value.toLowerCase().trim();
+    filterCards();
+  });
+
+  // Episode combobox
+  document.addEventListener('filter-episode', (e: Event) => {
+    activeEpisode = (e as CustomEvent).detail;
+    filterCards();
+  });
+
+  // Category pills
+  document.addEventListener('filter-category', (e: Event) => {
+    activeCat = (e as CustomEvent).detail;
+    filterCards();
+  });
+
+  // Play context buttons
+  document.querySelectorAll<HTMLButtonElement>('.play-context-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.dispatchEvent(new CustomEvent('play-context', {
+        detail: {
+          audioUrl: btn.dataset.audioUrl,
+          timestamp: btn.dataset.timestamp,
+          obra: btn.dataset.obra,
+          episodiTitol: btn.dataset.episodiTitol,
+          imatge: btn.dataset.imatge,
+        }
+      }));
+    });
+  });
+</script>

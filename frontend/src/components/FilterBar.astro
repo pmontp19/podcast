@@ -1,0 +1,175 @@
+---
+interface Props {
+  episodis: { id: string; titol: string }[];
+}
+const { episodis } = Astro.props;
+
+const categories = [
+  { value: '', label: 'Tots' },
+  { value: 'llibre', label: 'Llibres' },
+  { value: 'pelicula', label: "Pel·lícules" },
+  { value: 'serie', label: 'Sèries' },
+  { value: 'videojoc', label: 'Videojocs' },
+  { value: 'podcast', label: 'Podcasts' },
+  { value: 'altres', label: 'Altres' },
+];
+---
+
+<div class="bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-800 sticky top-[89px] z-30">
+  <div class="max-w-7xl mx-auto px-4 py-3 flex flex-col gap-3">
+    <!-- Search + episode combobox row -->
+    <div class="flex flex-col sm:flex-row gap-2">
+      <!-- Full-text search -->
+      <div class="relative flex-1">
+        <svg class="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
+        </svg>
+        <input
+          id="search-input"
+          type="search"
+          placeholder="Cercar per títol, autor..."
+          class="w-full pl-9 pr-4 py-2 rounded-lg border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-orange-400 focus:border-transparent"
+        />
+      </div>
+
+      <!-- Episode combobox -->
+      <div id="episode-combobox" class="relative sm:w-72">
+        <div class="relative">
+          <svg class="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 w-4 h-4 pointer-events-none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M4 6h16M4 12h16M4 18h7"/>
+          </svg>
+          <input
+            id="episode-input"
+            type="text"
+            placeholder="Tots els episodis"
+            autocomplete="off"
+            class="w-full pl-9 pr-8 py-2 rounded-lg border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-orange-400 focus:border-transparent cursor-pointer"
+          />
+          <button
+            id="episode-clear"
+            class="absolute right-2 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-600 dark:hover:text-gray-200 hidden p-0.5"
+            aria-label="Esborrar"
+          >
+            <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 6L6 18M6 6l12 12"/></svg>
+          </button>
+        </div>
+        <!-- Dropdown list -->
+        <ul
+          id="episode-dropdown"
+          class="hidden absolute top-full left-0 right-0 mt-1 max-h-64 overflow-y-auto rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 shadow-lg z-50 text-sm"
+          role="listbox"
+        >
+          <!-- Populated by JS -->
+        </ul>
+      </div>
+    </div>
+
+    <!-- Category pills -->
+    <div class="flex flex-wrap gap-2" id="category-pills">
+      {categories.map(cat => (
+        <button
+          class="category-pill px-3 py-1 rounded-full text-sm font-medium border transition-colors"
+          data-value={cat.value}
+        >
+          {cat.label}
+        </button>
+      ))}
+    </div>
+  </div>
+</div>
+
+<script define:vars={{ episodis }}>
+  // --- Category pills ---
+  const pills = document.querySelectorAll('.category-pill');
+
+  function updatePills(activeValue) {
+    pills.forEach(p => {
+      const isActive = p.dataset.value === activeValue;
+      p.className = isActive
+        ? 'category-pill px-3 py-1 rounded-full text-sm font-medium border transition-colors bg-orange-500 border-orange-500 text-white'
+        : 'category-pill px-3 py-1 rounded-full text-sm font-medium border transition-colors border-gray-300 dark:border-gray-600 text-gray-600 dark:text-gray-400 hover:border-orange-400 hover:text-orange-500';
+    });
+  }
+  updatePills('');
+
+  pills.forEach(pill => {
+    pill.addEventListener('click', () => {
+      const value = pill.dataset.value ?? '';
+      updatePills(value);
+      document.dispatchEvent(new CustomEvent('filter-category', { detail: value }));
+    });
+  });
+
+  // --- Episode combobox ---
+  const input = document.getElementById('episode-input');
+  const dropdown = document.getElementById('episode-dropdown');
+  const clearBtn = document.getElementById('episode-clear');
+
+  let selectedId = '';
+  let open = false;
+
+  function renderList(query) {
+    const q = query.toLowerCase().trim();
+    const filtered = q
+      ? episodis.filter(ep => ep.titol.toLowerCase().includes(q))
+      : episodis;
+
+    dropdown.innerHTML = '';
+
+    if (!q) {
+      // "All episodes" option
+      const all = document.createElement('li');
+      all.textContent = 'Tots els episodis';
+      all.className = 'px-3 py-2 cursor-pointer hover:bg-orange-50 dark:hover:bg-gray-800 text-gray-500 dark:text-gray-400 italic';
+      all.addEventListener('mousedown', (e) => { e.preventDefault(); selectEpisode('', ''); });
+      dropdown.appendChild(all);
+    }
+
+    filtered.forEach(ep => {
+      const li = document.createElement('li');
+      li.textContent = ep.titol;
+      li.className = 'px-3 py-2 cursor-pointer hover:bg-orange-50 dark:hover:bg-gray-800 truncate';
+      li.title = ep.titol;
+      li.addEventListener('mousedown', (e) => { e.preventDefault(); selectEpisode(ep.id, ep.titol); });
+      dropdown.appendChild(li);
+    });
+
+    if (filtered.length === 0) {
+      const empty = document.createElement('li');
+      empty.textContent = 'Cap episodi trobat';
+      empty.className = 'px-3 py-2 text-gray-400 italic';
+      dropdown.appendChild(empty);
+    }
+  }
+
+  function selectEpisode(id, titol) {
+    selectedId = id;
+    input.value = id ? titol : '';
+    input.placeholder = id ? '' : 'Tots els episodis';
+    clearBtn.classList.toggle('hidden', !id);
+    closeDropdown();
+    document.dispatchEvent(new CustomEvent('filter-episode', { detail: id }));
+  }
+
+  function openDropdown() {
+    renderList(input.value);
+    dropdown.classList.remove('hidden');
+    open = true;
+  }
+
+  function closeDropdown() {
+    dropdown.classList.add('hidden');
+    open = false;
+    // If nothing selected, reset display
+    if (!selectedId) {
+      input.value = '';
+      input.placeholder = 'Tots els episodis';
+    }
+  }
+
+  input.addEventListener('focus', () => openDropdown());
+  input.addEventListener('input', () => renderList(input.value));
+  input.addEventListener('blur', () => { setTimeout(closeDropdown, 150); });
+
+  clearBtn.addEventListener('click', () => selectEpisode('', ''));
+</script>

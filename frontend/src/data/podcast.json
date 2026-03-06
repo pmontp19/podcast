@@ -1,0 +1,176 @@
+{
+  "podcast": {
+    "titol": "mossegalapoma",
+    "autor": "mossegalapoma",
+    "descripcio": "El teu podcast de tecnologia i ciència en català",
+    "imatge_url": "http://mossegalapoma.cat/imatges/mlp_3000x3000_low-1.jpg"
+  },
+  "episodis": [
+    {
+      "id": "0a30561f-c9b2-5601-8849-b3cb044a9918",
+      "titol": "Migració de WordPress a Hugo – Programa 654",
+      "data_pub": "2026-02-20T07:11:09",
+      "durada": "0:00",
+      "resum": "Amb la col·laboració de la Universitat Politècnica de Catalunya.\n\nEn aquest episodi discutim la migració del seu contingut de WordPress a Hugo, un sistema de generació de llocs web estàtics. Parlen dels avantatges de Hugo, com el seu ús del llenguatge Markdown, i com han adaptat el seu contingut per a la nova plataforma. També aborden els reptes que han trobat durant el procés d&#8217;exportació i adaptació de les seves pàgines, així com l&#8217;ús de scripts per facilitar la transició. En aquesta conversa, Tomàs i Ludo exploren diversos temes relacionats amb la configuració i estil dels blogs, la metodologia de treball en projectes, l&#8217;automatització en el desenvolupament web, l&#8217;evolució de la tecnologia i la seva filosofia, així com els models i protocols en intel·ligència artificial. A través de les seves experiències, discuteixen com les eines i les tendències actuals estan canviant la manera en què es crea i es consumeix contingut en línia.\n\n   \n\nCONTINGUT &#8211; REFERÈNCIES\n\nMigració de WordPress a Hugo: Un Nou Començament\nAvantatges de Hugo: Per què Canviar?\nMarkdown: El Futur del Contingut Web\nExportant Contingut: Estratègies i Reptes.\n\n&nbsp;",
+      "audio_url": "https://mossegalapoma.cat/podcast-download/33292/migracio-de-wordpress-a-hugo-programa-654.mp3",
+      "mencions": []
+    },
+    {
+      "id": "409fcc63-1377-5964-9896-c67ee6d044c8",
+      "titol": "Grans empreses tecnològiques, estats i usuaris – Programa 653",
+      "data_pub": "2026-02-12T05:46:16",
+      "durada": "0:00",
+      "resum": "Amb la col·laboració de la Universitat Politècnica de Catalunya.\n\nEn aquest episodi, i en companyia de l&#8217;amic &#8220;Radurdin&#8221;, conversem de fins on ha d’arribar l’Estat (i la UE) per protegir menors i la societat a les xarxes, i fins a quin punt això pot acabar erosionant privacitat, anonimat i criptografia.\n\n   \n\nCONTINGUT &#8211; REFERÈNCIES\n\n\nBankID (Suècia): exemple d’identitat digital per autenticar-se/validar edat (el “token” o “passaport” d’accés). https://www.bankid.com/en​\n\n\nEFF (Electronic Frontier Foundation): recursos i posicionament sobre drets digitals, privacitat i llibertats civils a internet. https://www.eff.org​​\n\n\nCory Doctorow (via EFF) – “regula corporacions, no ciutadans”: enfocament del tram final (antimonopoli, limitar fusions, fiscalitat i responsabilitat real de plataformes). https://www.eff.org​​\n\n\nDRM i dret a reparar (via EFF): crítica al marc legal que blinda “segells digitals” i dificulta reparar/competir; proposta de revertir-ho. https://www.eff.org/issues/drm​​\n\n\nPodcast “Hi ha algú, allà fora?” (Joan Anton Català): recomanació explícita (i possible convidat) per aprofundir en ciència/IA. https://open.spotify.com/show/5Ko9KhGa8GoGan38MUo13Z​​\n\n\nTema per a futur episodi: singularitat i “drets” per a IA/agents: proposta d’agenda oberta al final del document. https://www.eff.org/ai​\n\n\nLectures recomanades (Neal Stephenson): ficció com a brúixola tecnopolítica. Snow Crash: https://en.wikipedia.org/wiki/Snow_Crash · The Diamond Age: https://en.wikipedia.org/wiki/The_Diamond_Age​",
+      "audio_url": "https://mossegalapoma.cat/podcast-download/33285/grans-empreses-tecnologiques-estats-i-usuaris-programa-653.mp3",
+      "mencions": []
+    },
+    {
+      "id": "47c41dff-54c9-5278-8e5c-b374f101b73c",
+      "titol": "OpenClaw i la llibertat d’expressió a Internet – Programa 652",
+      "data_pub": "2026-02-07T06:43:08",
+      "durada": "0:00",
+      "resum": "Amb la col·laboració de la Universitat Politècnica de Catalunya.\nOpenClaw Logo\nParlem de la proposta política de limitar l’accés de menors a xarxes socials i les implicacions de fer-ho via verificació d’identitat (DNI, tokens, risc de vigilància, censura i “pre-bunking”). També analitzem el fenòmen dels &#8220;agent loops&#8221; a la IA.\n\n   \n\nCONTINGUT &#8211; REFERÈNCIES\n&nbsp;\n\n\nMastodon (Fediverse) com a alternativa a xarxes centralitzades.​\n\n\nBankID (Suècia) com a referència d’identificació/validació via tokens i atributs.​\n\n\nX Community Notes com a mecanisme de contextualització/correcció comunitària.​\n\n\nApple Family Sharing / Screen Time com a exemple de control parental al dispositiu.​\n\n\nModel Context Protocol (MCP) per entendre l’estàndard de connexió d’eines/funcions amb LLM.​\n\n\nCursor com a exemple d’eina de desenvolupament amb bucles agentics.​\n\n\nWe Are The Art | Brandon Sanderson’s Keynote (YouTube) (suggeriment explícit del tram final). ​\n\n\nBYD cars to include Catalan language in infotainment system (referència sobre BYD i el català).​\n\n\nLex Fridman Podcast #482 amb Pavel Durov (recomanació d’entrevista llarga).​",
+      "audio_url": "https://mossegalapoma.cat/podcast-download/33281/openclaw-i-la-llibertat-dexpressio-a-internet-programa-652.mp3",
+      "mencions": []
+    },
+    {
+      "id": "5fcff0e1-fb88-553d-a2f4-a557c7afaa5b",
+      "titol": "Especial “El progressiu i ràpid aïllament dels Estats Units” – Programa 651",
+      "data_pub": "2026-01-31T06:33:51",
+      "durada": "0:00",
+      "resum": "Amb la col·laboració de la Universitat Politècnica de Catalunya.\nUSA isolated\nEpisodi especial amb els amics i oients, residents als Estats Units, Ramón Maria Gallart i en Josep (SinnerBOFH) per parlar del &#8220;Progressiu i ràpid aïllament dels Estats Units”.\n\n   \n\nCONTINGUT &#8211; REFERÈNCIES\n\nCoffee Break: Señal y Ruido: es recomana aquest podcast de ciència (tertúlia setmanal) com a referència per seguir actualitat científica amb criteri.​\nResearch Triangle Park (RTP): es menciona el Research Triangle Park com a gran pol tecnològic/industrial a Carolina del Nord (context: explicar la diferència entre zones rurals i nuclis urbans/tecnològics a l’estat).​\nEspaña, capital París (Germà Bel): es proposa aquest llibre com a lectura clau per entendre el model radial d’infraestructures (i la lògica de centralització) a l’Estat espanyol.\nInformació. Números de USA des del segon terme de Trump.\nSobre les armes i les manifestacions a Minessota:\nAnàlisis del vídeo de les declaracions del DHS (The Department of Home Security) sobre l&#8217;assassinat a Minneapolis.\nPer què estant marxant tants multi-milionaris del Regne Unit.\nL’explicació oculta de per què Catalunya expulsa el talent científic\n◦La darrera cançó d’en Bruce Springsteen: “Streets of Minneapolis”.\nSobre l&#8217;independentisme d&#8217;Alberta al Canada\n\n&nbsp;",
+      "audio_url": "https://mossegalapoma.cat/podcast-download/33278/especial-el-progressiu-i-rapid-aillament-dels-estats-units-programa-651.mp3",
+      "mencions": []
+    },
+    {
+      "id": "51866df5-cea1-5424-bfa3-ec160236d503",
+      "titol": "El robatori massiu de dades d’ENDESA i l’augment del “phising” sofisticat als seus clients – Programa 650",
+      "data_pub": "2026-01-23T06:49:31",
+      "durada": "0:00",
+      "resum": "Amb la col·laboració de la Universitat Politècnica de Catalunya.\n\nEn companyia de l&#8217;amic Guille que ens explicarà el &#8220;phising&#8221; que ha patit a partir del robatori massiu de dades d&#8217;ENDESA i que com està intentant sortir-se’n.\n\n   \n\nCONTINGUT &#8211; REFERÈNCIES\nReferències principals\n\n\nPodcast La Píndola Vermella de Ramon Maria Gallart, amb un episodi especial sobre el leak d&#8217;Endesa i riscos d&#8217;estafes (resumit com a essencial per entendre el cas). Escolta&#8217;l a lapindolavermella.cat o Apple Podcasts.​\n\n\nPodcast sobre hackers Darknet Diaries (possiblement &#8220;Darnick Darius&#8221; com a error de transcripció), recomanat per històries reals de hacking. Disponible a verydisco.app o plataformes habituals.​​\n\n\nPropostes i suggeriments d&#8217;eines/serveis\n\n\nAixeta.cat (laixeta), alternativa europea sense ànim de lucre a Patreon per mecenas de creadors de contingut; Pàgina d&#8217;en Dani a l&#8217;Aixeta\n\n\nPerplexity Pro, eina d&#8217;IA per investigació amb cites verificables, recomanada per contractes i consultes (més que Gemini). Subscriu-te a perplexity.ai.​​\n\n\nStandard Ebooks, web per EPUBs gratuïts de llibres en domini públic (nous títols 2026). Visita standardebooks.org.​​\n\n\nExtensió Chrome &#8220;En català si us plau&#8221;, per veure automàticament versions en català de webs. Instal·la-la des de vilaweb.cat.​​\n\n\nSuggeriments culturals i locals\n\n\nVídeo de Jim Carrey cantant &#8220;I Am the Walrus&#8221; dels Beatles (versió d&#8217;estudi impressionant). Mira a YouTube.​​\n\n\nSlimbook, portàtils europeus fets a València (suggerit per locals, tot i limitacions en models locals d&#8217;IA). Compra a slimbook.es.​\n\n\nJ-Cloud, servei de núvol europeu amb espai il·limitat barat (~12-15€/mes, baixa velocitat &gt;5TB), ideal per còpies de seguretat. Més info a jcloud.es (assumint basat en context europeu).​",
+      "audio_url": "https://mossegalapoma.cat/podcast-download/33275/el-robatori-massiu-de-dades-dendesa-i-laugment-del-phising-sofisticat-als-seus-clients-programa-650.mp3",
+      "mencions": [
+        {
+          "obra": "La Píndola vermella",
+          "categoria": "podcast",
+          "marca_temps": "00:02:27",
+          "context": "el Ramon Maria Gallar va fer ell té un podcast que és com el Guadiana que apareix i desapareix, que es diu La Píndola vermella, i ha fet un episodi especial molt breu explicant aquest cas d'Endesa",
+          "justificacio": "El parlant expressa que Ramon Maria ha fet un episodi especial que resumeix molt bé el tema i és molt important, indicant que mereix ser escoltat.",
+          "imatge_url": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts116/v4/b6/09/3e/b6093e7c-8123-aa76-c8ec-c643683107ac/mza_9148629450439459645.jpg/600x600bb.jpg",
+          "autor": "Ramon Maria Gallart Escolà",
+          "api_id": "itunes:podcast:1726494250"
+        },
+        {
+          "obra": "Recipe History",
+          "categoria": "podcast",
+          "marca_temps": "00:05:13",
+          "context": "Jo et recomanaria que et subscriguissis al podcast de Recept History que per cert han tret un especial 5 capítols sobre la caiguda del Shah a l'època del Jimmy Carter, recordeu que era aquell president que menjava, que cultivava cacauets, i és boníssim boníssim",
+          "justificacio": "El parlant fa una recomanació explícita per subscriure's al podcast i elogia molt positivament l'especial de 5 capítols.",
+          "imatge_url": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts116/v4/89/42/4d/89424daf-3e1b-20e3-5ae8-b86926e3ffe9/mza_13888727450129011572.png/600x600bb.jpg",
+          "autor": "Recipes Project",
+          "api_id": "itunes:podcast:1671204561"
+        },
+        {
+          "obra": "Darnick Darius",
+          "categoria": "podcast",
+          "marca_temps": "00:05:32",
+          "context": "el que escolto així de podcast que no és la recomanació, no és meva, la va fer el Dani fa un temps es diu que es diu Darnick Darius o alguna cosa així d'un tio que va recopilant històries sobre hackeados és brutal, és brutal",
+          "justificacio": "El parlant elogia molt positivament el podcast dient que és 'brutal', expressant entusiasme per les històries sobre hackejos que recopila.",
+          "imatge_url": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts125/v4/2a/e1/c2/2ae1c230-910b-75a1-040a-711393d1c365/mza_4643926860606788306.jpg/600x600bb.jpg",
+          "autor": "Jesus Sanchez",
+          "api_id": "itunes:podcast:1217722848"
+        }
+      ]
+    },
+    {
+      "id": "4b98c2b5-d283-5e80-b670-b93d3595ba9c",
+      "titol": "Biblioteca connectada a l’AppleTV i canvis de la IA a la feina i a casa – Programa 649",
+      "data_pub": "2026-01-18T02:31:58",
+      "durada": "0:00",
+      "resum": "Amb la col·laboració de la Universitat Politècnica de Catalunya.\n\nEn aquest episodi parlem de com construir una biblioteca connectada al nostre AppleTV per a ordenar i veure sèries i pel·lícules, dels canvis que la IA ha comportat en la nostra feina diària i a casa.\n\n   \n\nCONTINGUT &#8211; REFERÈNCIES\n\n\n\nCompra d&#8217;Apple TV 4K: Els Reis van portar un Apple TV 4K per millorar l&#8217;experiència davant les apps defectuoses de la TV LG, configurant-lo per encendre/apagar la tele i accedir a serveis com Filmin i 3Cat.\n\n\nSmart Converter Pro 3: Aplicació per convertir formats de vídeo (AVI, MKV) i exportar directament a l&#8217;Apple TV, però amb problemes en subtítols i metadades\n\n\nAbandonament de Plex: Rebutjat per enxitificació, comptes obligatoris i ports oberts desconeguts, passant a alternatives open source.\n\n\nImplementació de Jellyfin: Servidor multimèdia open source instal·lat al Mac per organitzar llibreries (pel·lícules, sèries, vídeos personals), descarregar subtítols i caràtules automàticament, evitant vendor lock-in.\n\n\nClient Infuse Pro: App de 9€ per Apple TV/iOS que connecta amb Jellyfin/Samba, gestiona subtítols i organitza contingut remotament, sincronitzant via iCloud\n\n\nAplicacions bancàries N26 i Revolut: Elogiades per interfícies senzilles, consistents i centrades en l&#8217;usuari, evitant publicitat intrusiva, a diferència d&#8217;altres apps financeres.\n\n\nDesconnexió de TVs intel·ligents: Recomanació de desconnectar WiFi/RJ45 en TVs LG/Samsung/Philips per evitar publicitat i passar tot per Apple TV com a interfície segura.",
+      "audio_url": "https://mossegalapoma.cat/podcast-download/33271/biblioteca-connectada-a-lappletv-i-canvis-de-la-ia-a-la-feina-i-a-casa-programa-649.mp3",
+      "mencions": []
+    },
+    {
+      "id": "87449741-623c-5225-a089-c7003a692f00",
+      "titol": "Recuperar informació de dispositius antics i Nano Banana Pro – Programa 648",
+      "data_pub": "2026-01-08T15:11:05",
+      "durada": "0:00",
+      "resum": "Amb la col·laboració de la Universitat Politècnica de Catalunya.\n\nTornem de les vacances de Nadal amb moltes ganes. En aquest episodi parlem de la generació d&#8217;imatges amb Nano Banana Pro, de la necessitat de recuperar informació digital desada en dispositius antics, com discs magnètics, etc i de molts temes més.\n\n   \n\nCONTINGUT &#8211; REFERÈNCIES\n\n\nCòpies de seguretat de dades digitals antigues (Drobo, discs durs mecànics, disquets, fotos digitals pre-iPhone) i necessitat de migrar-ho tot a suport modern i/o al núvol per no perdre records familiars.​\nEnllaç recomanat: https://www.backblaze.com/\n\n\nEines de revelat RAW de cada marca (Capture NX de Nikon, software de Canon) i posterior pas massiu dels professionals a Adobe Lightroom per funcionalitats de correcció de paral·lelismes, interiorisme, etc.​\nEnllaç recomanat: https://www.adobe.com/es/products/photoshop-lightroom.html\n\n\nModel d’imatge a imatge de Google “Nano Banana Pro” (nom intern de Gemini per a imatge) per fer restauració, colorització, upscale i retoc de fotografies, treballant via API (Paganini, clau d’API, crèdit de 10 €).​​\nEnllaç recomanat: https://ai.google.dev/gemini-api\n\n\nÚs de models de generació d’imatges per mockups domèstics: proves de catifes al menjador, panells acústics a la paret, reformes de cuina, disseny d’interiors sobre fotos reals.​\nEnllaç recomanat: https://www.midjourney.com/\n\n\nModel de Google/Gemini per inserir objectes dibuixats (óssos en Vespa, globus) en paisatges coherents amb mateix estil gràfic i diferents contextos (Ruta de la Seda, Itàlia) per a un blog de viatges.​​\nEnllaç recomanat: https://gemini.google.com/\n\n\nÚs d’IA d’imatge per a disseny professional: reformes, cuines, pisos nous, com a alternativa molt més ràpida a antics programes “de cuines” i a renderitzats 3D tradicionals.​\nEnllaç recomanat: https://www.canva.com/ai-image-generator/\n\n\nÚs massiu de lasers i eines de mesura per a bricolatge domèstic: distancímetre làser del Lidl, nivells làser, serres amb guia làser.​\nEnllaç recomanat: https://www.lidl.es/c/herramientas/c10010021\n\n\nDetector de cables elèctrics dins la paret per evitar foradar sobre línies amb tensió.​\nEnllaç recomanat: https://www.bosch-diy.com/es/es/categorias/detectores\n\n\nComunitat a Telegram, presència a Twitter i contacte per correu (podcast@mossegadelapoma.cat) com a canals de relació amb l’audiència.​\nEnllaç recomanat: https://t.me/mossegadelapoma\n\n\nEnllaç esmentat a l’entrevista a Ars Technica: “Computer Scientist Jan LeCun: Intelligence Really Is About Learning”.​\nEnllaç recomanat: https://arstechnica.com/information-technology/2024/01/computer-scientist-yann-lecun-intelligence-really-is-about-learning/\n\n\nHistòria de la IA clàssica: Rosenblatt i el perceptró, Minsky i la IA simbòlica, “AI winters”, manca de potència de càlcul i de dades; aparició posterior de GPUs i deep learning.​\nEnllaç recomanat: https://plato.stanford.edu/entries/artificial-intelligence/\n\n\nReferència crítica a Marvin Minsky i al llibre “Perceptrons” com a atac a la línia de recerca de Rosenblatt.​\nEnllaç recomanat: https://mitpress.mit.edu/9780262631112/perceptrons/\n\n\nReferència a Dan Carlin i el podcast “Hardcore History”, episodi “Supernova in the East / Mania of Subjugation” com a contingut d’alta qualitat.​\nEnllaç recomanat: https://www.dancarlin.com/hardcore-history-series/\n\n\nPodcast “Zeta Testers”: lectura de llibres de desenvolupament personal i negoci, discussió intensa i contraposició d’arguments, comunitat a Telegram.​\nEnllaç recomanat: https://www.zetatesters.com/\n\n\nEscriptors de self‑publishing en anglès com Johnny B. Truant i Craig Alanson, sorgits de Kindle Direct Publishing i podcasts de “self-publishing”.​\nEnllaç recomanat: https://www.selfpubform.com/\n\n\nCraig Alanson i la seva saga “Expeditionary Force” (i “Convergence”) com a exemple de space opera humorística amb IA, gossos que parlen i moltíssimes referències pop.​\nEnllaç recomanat: https://www.craigalanson.com/expeditionary-force\n\n\nRecomanació central",
+      "audio_url": "https://mossegalapoma.cat/podcast-download/33268/recuperar-informacio-de-dispositius-antics-i-nano-banana-pro-programa-648.mp3",
+      "mencions": [
+        {
+          "obra": "Dungeon Crawler Carl",
+          "categoria": "llibre",
+          "marca_temps": "01:17:02",
+          "context": "Matt Diniman té una gata que es diu princesa Donut i l'argument de veritat allò és bèstia és absurd però és absorbent els personatges són profunds les situacions són desternillants",
+          "justificacio": "El parlant expressa entusiasme explícit sobre la saga, descrivint-la com \"bèstia\", \"absorbent\" i amb \"personatges profunds\" i \"situacions desternillants\". Recomana clarament aquesta obra.",
+          "imatge_url": "https://covers.openlibrary.org/b/id/15143022-M.jpg",
+          "any": "2020",
+          "autor": "Matt Dinniman",
+          "api_id": "ol:/works/OL24593432W"
+        },
+        {
+          "obra": "Convergence",
+          "categoria": "llibre",
+          "marca_temps": "01:18:30",
+          "context": "els de la saga de Convergence impressionants a Convergence hi ha un gosset que parla",
+          "justificacio": "El parlant expressa admiració clara ('impressionants') per aquesta saga de Craig Alanson i en destaca elements específics que la fan interessant.",
+          "imatge_url": "https://covers.openlibrary.org/b/id/6258585-M.jpg",
+          "any": "1965",
+          "autor": "Flannery O'Connor",
+          "api_id": "ol:/works/OL65289W"
+        },
+        {
+          "obra": "Expeditionary Force",
+          "categoria": "llibre",
+          "marca_temps": "01:18:28",
+          "context": "els de la saga de Convergence és el d'Expeditionary Force impressionants",
+          "justificacio": "El parlant parla amb admiració ('impressionants') sobre aquesta obra de Craig Alanson, situant-la entre les seves recomanacions de literatura.",
+          "imatge_url": "https://covers.openlibrary.org/b/id/12424815-M.jpg",
+          "any": "2021",
+          "autor": "John T. Greenwood",
+          "api_id": "ol:/works/OL25443342W"
+        },
+        {
+          "obra": "Hard Things About Hard Things",
+          "categoria": "llibre",
+          "marca_temps": "01:59:00",
+          "context": "els editors fan molt bona feina moltes vegades però són gatekeepers",
+          "justificacio": "El parlant fa referència a discussions sobre llibres de gestió i editorial que impliquen valoració d'obres de qualitat, tot i que és contextual i indirecta.",
+          "imatge_url": "https://covers.openlibrary.org/b/id/7279515-M.jpg",
+          "any": "2014",
+          "autor": "Ben Horowitz",
+          "api_id": "ol:/works/OL16818208W"
+        }
+      ]
+    },
+    {
+      "id": "1675928d-c560-5b56-bf0a-68b67c25a40e",
+      "titol": "Tertúlia sobre radioafició 19 – les preses de terra – Minuts Mosseguis 091",
+      "data_pub": "2025-12-19T12:22:21",
+      "durada": "0:00",
+      "resum": "Amb la col·laboració de la Universitat Politècnica de Catalunya.\n\nEpisodi especial de minuts mosseguis amb una nova tertúlia sobre radioafició on parlem de la importància de les preses de terra en les nostres instal·lacions i comentem el concepte de &#8220;Space Weather&#8221; en relació a la propagació de les ones de ràdio.\n\nPARTICIPANTS\nEA3IMR &#8211; Tomàs &#8211; Catalonia Ham a YouTube\nEA3IPX &#8211; David &#8211; Canal a YouTube\nEA3HSL &#8211; Jordi &#8211; Canal a YouTube\nEA3BTZ &#8211; Enric\n\nCONTINGUT &#8211; REFERÈNCIES\n\nArticle de l’Enric EA3BTZ “Cal posar a terra les nostres instal·lacions d’antenes?” \nArticle de l’amic Toni Millet EA3T “Mitologia radioelèctrica &#8211; toquem de peus a terra” https://qrp.cat/articles/la_terra.pdf\nMapa Impactes de llamps a la Península Ibèrica: El Principat de Catalunya es troba entre 4-6 d’un nivell de 6, El País València entre 1,5 i 2,5 i Les Balears en un nivell 2 a excepció de l’est de Menorca amb un nivell 2,5. https://psr.es/nds/img/mapa.png\nLlibre: “Puesta a tierra en Edificios y en Instalaciones Eléctricas, Juan J. Martínez Requena i José Carlos Toledano Gasca”, Editorial PARANINFO, \nLlibre: “Grounding and Bounding for the Radio Amateur” (ARRL) \nMaterial per a pressa de terra i protecció contra llamps a DX Engineering: https://www.dxengineering.com/search/&#8230;\nNormativa vigent: Càlcul Codi Tècnic d’Edificació https://psr.es/nds/\nIonosfera Alterada: Aquests dies estem tenint un tren d’emissions de massa coronal solar que estan impactant amb la Terra i que estan afectant significativament les comunicacions per ràdio en general i la HF en particular. Per la part positiva aquestes tempestes geomagnètiques comporten espectaculars aurores a latituds baixes. \nSpace Weather &#8211; Canal a YouTube de Tamitha Skov    / @tamithaskov  \n“Where are we now?” canal a Mastodon sobre informació d’activitat solar i impacte a la terra, incloent apagades i incidències en bandes de radioaficionats , amb tó d’humor https://mastodon.social/@wawn\n\n\n\nUneix-te a la comunitat en el nou grup privat a Telegram de Catalonia Ham",
+      "audio_url": "https://mossegalapoma.cat/podcast-download/33262/tertulia-sobre-radioaficio-19-les-preses-de-terra-minuts-mosseguis-091.mp3",
+      "mencions": []
+    },
+    {
+      "id": "532aa1e0-bcc1-566f-ae79-700df1ebf92f",
+      "titol": "Impressores 3D i Elon Musk contra Europa – Programa 647",
+      "data_pub": "2025-12-12T10:30:41",
+      "durada": "0:00",
+      "resum": "Amb la col·laboració de la Universitat Politècnica de Catalunya.\n\nDarrera entrega de l&#8217;episodi setmanal abans de vacances de Nadal on parlem dels espais de treball, d&#8217;impressores 3D i de la guerra d&#8217;Elon Musk amb la Unió Europea.\nAprofitem per a desitjar-vos Bones Festes!!\n\n   \n\nCONTINGUT &#8211; REFERÈNCIES\nImpressió 3D i taller\n\n\nConversa sobre impressió 3D domèstica, filtres de partícules i ús d’una habitació taller per a la impressora, amb menció de Bambu Lab i el seu ecosistema de programari Bambu Studio, des d’on es poden descarregar models compartits per la comunitat.​​\n\n\nSuggeriment de combinar impressora 3D amb una petita màquina de control numèric (CNC) per fer peces en alumini i fusta, i d’utilitzar programes de modelat 3D com Fusion 360 o alternatives de programari lliure per crear els dissenys abans de generar el codi de màquina (G-code).​​\n\n\nReferència a Orca Slicer com a “slicer” open source per a impressores 3D, presentat com a recomanació per explorar-lo més endavant en lloc o a més de Bambu Studio.​​\n\n\nProposta de disposar d’un espai propi de taller a casa, amb taula de treball, eines de fusteria i maquinària com serra de banda, taladre de columna o màquines de llimar de la marca Einhell, que es presenta com a gamma “hobby avançat” assequible.​​\n\n\n\nEines, electrònica i cultura maker\n\n\nRecomanació pràctica inspirada en Cory Doctorow: quan compris una eina, comença per la versió més barata; si veus que l’utilitzes molt, en la següent compra passa directament al millor model que et puguis permetre.​​\n\n\nConversa sobre la cultura maker i el valor terapèutic de la feina manual (fusta, electrònica, cuina, etc.) com a contrapès a les feines de “cap”, equiparant-la als beneficis d’anar al psicòleg o participar en altres activitats de cura personal.​​\n\n\nReferència humorística i nostàlgica al mític episodi de Top Gear on posen a prova la resistència d’una Toyota Hilux amb proves extremes, recomanant buscar el vídeo a internet per veure de què és capaç aquesta pick-up.​​\n\n\nConversa sobre eines d’electricitat i xarxes, com peladores de cable i grimpadores per a RJ‑45, acompanyada d’anècdotes sobre la diferència entre l’ús “aficionat” d’aquestes eines i la destresa dels professionals que ho fan només amb un ganivet.​​\n\n\nReferència als nous soldadors lleugers i digitals (incloent models sense fil) capaços d’arribar a temperatures d’uns 350 graus, destacant-los com a eines modernes per a projectes d’electrònica i radioafició.​​\n\n\n\nLlengua, traduccions i IA\n\n\nComentari sobre l’avaluació de nivell de català al Servei de Llengües de la UPC i la possibilitat de presentar-se directament al C2 (o equivalent) sense passar per tot el recorregut de cursos, com a exemple de com es pot acreditar el nivell mitjançant proves.​​\n\n\nReflexió sobre la feina de Softcatalà i dels grups de recerca en lingüística computacional que han generat corpus anotats i recursos en català des dels anys noranta, que avui es fan servir per entrenar sistemes de traducció automàtica i models de llenguatge.​​\n\n\nDescripció d’una eina per a traduccions col·laboratives basada en IA (anomenada a la conversa com “Crowd LN”), que permet traduir programari i marca en colors els segments on convé revisió humana, relacionable amb plataformes modernes de localització com Crowdin.​​\n\n\nExplicació d’un projecte per traduir al català una aplicació per radioaficionats (per activacions tipus Parks on the Air, Summits on the Air, etc.), amb un equip de voluntaris que volen establir un petit llibre d’estil per unificar terminologia tècnica.​​\n\n\nDiscussió sobre el potencial de la IA generativa per reforçar llengües minoritzades, facilitant la traducció i adaptació de continguts digitals al català amb una feina de revisió molt més lleugera que fa uns anys.​​\n\n\nReferència als corpus en català anotats amb SGML desenvolupats a universitats com la Universitat Pompeu Fabra, que van servir de base per a eines lingüístiques, sistemes de correcció i, més endavant, per e",
+      "audio_url": "https://mossegalapoma.cat/podcast-download/33257/impressores-3d-i-elon-musk-contra-europa-programa-647.mp3",
+      "mencions": []
+    },
+    {
+      "id": "8f52162f-f494-5a55-addf-5e9b0a5e9da8",
+      "titol": "Charles Martell i la Trollisis Haegeliana – Programa 646",
+      "data_pub": "2025-12-04T09:28:24",
+      "durada": "0:00",
+      "resum": "Amb la col·laboració de la Universitat Politècnica de Catalunya.\n\nEn aquest episodi parlem de l’alegria d’haver entrat a la Viquipèdia com a podcast de referència en tecnologia en català i on tenim un &#8220;pseudo&#8221; debat històrics sobre el relat de la “Reconquesta” i el paper de Carles Martell i els mossàrabs.\nEn la part tecnològica comentem el porno generat amb Stable Diffusion i LoRA, els riscos de deepfakes i «revenge porn» alimentats per plataformes com Civitai, i la necessitat urgent d’estàndards com C2PA per certificar fotos i vídeos.\nTambé analitzem els moviments reguladors europeus, amb especial atenció a la llei «Chat Control» i casos com GrapheneOS, que tensionen la frontera entre privacitat i vigilància. En clau més domèstica, s’apunta la possible arribada del català a Siri via Gemini, es reivindica el paper de l’activisme lingüístic davant el retard d’Apple, i es comparen les capacitats actuals de ChatGPT, Gemini i Perplexity per treballar en català.\nFinalment, parlem sobre creació musical i literària amb IA, destacant Suno com a estudi virtual per convertir taral·lejats en cançons produïdes i el paper dels LLM com a editors que ajuden a polir i estructurar el primer llibre d’un autor aficionat\n\n   \n\nCONTINGUT &#8211; REFERÈNCIES\n\n\nEsment de l’ús de models d’IA com Perplexity Pro per generar el primer programa “real” funcional, i com a eina habitual de treball per a programació, recerca i automatització, amb informació sobre el servei a perplexity.ai.​​\n\n\nRecomanació de seguir el treball de l’historiador Emilio González Ferrín sobre el llegat àrab a la península Ibèrica i la crítica al relat clàssic de la “Reconquesta”, amb referència a la seva obra i conferències que es poden trobar cercant-lo a Google Scholar o a la seva fitxa d’autor a Dialnet.​\n\n\nDiscussió sobre la figura de Carles Martell, la batalla de Tours (732) i el paper dels regnes francs en la contenció de les incursions musulmanes al sud de França, amb context històric detallat accessible a la seva entrada de Viquipèdia.​\n\n\nConversa sobre la llengua mossàrab, l’escriptura en caràcters àrabs i els conflictes litúrgics (missa en llatí vs en àrab), amb més informació a l’article «Mossàrab» de la Viquipèdia.​\n\n\nDebat sobre la construcció del relat històric, el paper de la religió islàmica i la crítica a la historiografia confessional, que es pot ampliar amb recursos divulgatius sobre historiografia crítica a Institut Europeu de la Mediterrània (IEMed).​\n\n\nIntroducció a la problemàtica del porno generat amb IA i l’ús de models com Stable Diffusion sense filtres, amb comunitats que comparteixen LoRA i workflows a plataformes com Civitai.​​\n\n\nExplicació dels LoRA (Low-Rank Adaptation) com a capes addicionals per personalitzar models d’imatge (per exemple, per crear personatges o productes repetibles), amb tutorials específics disponibles a la documentació de LoRA a Civitai Education.​​\n\n\nAdvertiment sobre l’ús maliciós de models d’IA d’imatge per fer deepfakes i “revenge porn”, especialment a partir d’una sola foto d’una persona, amb context sobre riscos i regulació a articles com el de l’Electronic Frontier Foundation sobre escaneig i vigilància tipus «Chat Control».​​\n\n\nReferència a l’app Draw Things per a macOS i iOS per executar models Stable Diffusion en local, disponible a l’App Store.​\n\n\nEsment dels models xinesos Qwen per a generació d’imatge i vídeo (com WAN) amb menys censura, descrits a la pàgina oficial dels models Qwen a ModelScope / Alibaba Cloud.​\n\n\nDiscussió sobre la necessitat de marcar l’autenticitat de fotos i vídeos per distingir-los de contingut generat per IA, introduint l’estàndard C2PA (Coalition for Content Provenance and Authenticity), explicat al web de la coalició i en resums com l’article de The SSL Store sobre C2PA i imatges.​​\n\n\nReferència al fet que Leica és una de les primeres marques de càmeres que implementa C2PA per signar imatges en origen, com es descriu a la nota tècnica sobre C2PA al lloc de Leica Camera.​​\n\n\nCo",
+      "audio_url": "https://mossegalapoma.cat/podcast-download/33249/charles-martell-i-la-trollisis-haegeliana-programa-646.mp3",
+      "mencions": []
+    }
+  ]
+}
